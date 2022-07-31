@@ -1,0 +1,23 @@
+footer{
+    background-color: $hover-blue;
+    padding: 20px 0;
+
+.footer-container{
+    display: flex;
+    @include sm{
+        display: block;
+    }
+    .footer-company{
+        flex: 2;
+    }
+    .footer-info{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        div{
+            flex: 1;
+        }
+    }
+}
+}

@@ -1,0 +1,73 @@
+.services {
+    margin-bottom: 3rem;
+    .tab-container {
+        max-width: 1000px;
+        margin: auto;
+
+        .tab-button-group {
+            margin: 3rem 0;
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                justify-content: space-between;
+                align-items: center;
+                list-style: none;
+                @include sm{
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: auto;
+                    text-align: center;
+                    gap: 20px;
+                }
+                li{
+                    text-align: center;
+                }
+            }
+
+            .tab-btn {
+                padding: 20px;
+                border-radius: 50%;
+                background-color: transparent;
+                border-color: $white;
+                transition: 0.4s;
+                cursor: pointer;
+                background: $hover-blue;
+
+                &:hover {
+                    transform: translateY(-10px);
+                    @include sm{
+                        transform: scale(1.05);
+                    }
+                }
+
+                svg {
+                    color: $white;
+                }
+
+                @include sm{
+                    padding:10px;
+                }
+            }
+
+            .tab-btn.active {
+                background-color: transparent;
+
+            }
+        }
+
+        .service-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            animation: fadeIn 0.6s;
+            @include sm{
+
+                text-align: center;
+                display: block;
+            }
+        }
+    }
+    @include sm{
+        margin: 1rem 20px 3rem;
+    }
+}

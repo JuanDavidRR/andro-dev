@@ -1,0 +1,118 @@
+header {
+    background-color: $dark-grey;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    .header-container {
+        max-width: 1240px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        h1 {
+            flex: 1;
+        }
+
+        .header-navbar {
+            flex: 2 1;
+            display: inherit;
+            justify-content: space-between;
+            align-items: center;
+
+            ul {
+                flex: 5;
+                display: inherit;
+                justify-content: flex-start;
+                gap: 2rem;
+
+                li a {
+                    color: $white;
+
+                    :hover {
+                        color: $dark-blue;
+                    }
+                }
+            }
+
+            @include sm {
+                display: none;
+            }
+
+            @include md {
+                display: none;
+            }
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: $white;
+            display: none;
+
+            .header-navbar-mobileBtn {
+                transition: 0.3s;
+                display: none;
+            }
+
+            @include sm {
+                display: block;
+            }
+
+            @include md {
+                display: block;
+            }
+        }
+
+        .header-cta {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            transition: 0.4s;
+            border-radius: 10px;
+            background-color: $base-blue;
+
+            &:hover {
+                background-color: $hover-blue;
+            }
+        }
+    }
+
+    .inactive {
+        transform: translateX(-100vh);
+    }
+
+    .active {
+        transform: translateX(0px);
+    }
+
+    .navbar-mobile-menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $dark-grey;
+        padding: 20px;
+        transition: 0.4s;
+        width: 300px;
+        border-right: 1px solid white;
+        height: 100vh;
+        z-index: 20;
+        text-align: center;
+
+        ul {
+            margin-top: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+
+            li a {
+                color: white
+            }
+        }
+    }
+}

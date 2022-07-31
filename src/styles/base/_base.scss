@@ -1,0 +1,165 @@
+@import './settings';
+
+* {
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $dark-grey;
+    color: $white;
+	scroll-behavior: smooth;
+	margin: 0;
+    padding: 0;
+}
+
+main {
+	width: 100%;
+}
+
+
+h1, h2, h3, h4, h5, a{
+    font-family: 'Poppins' 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	@include sm{
+        text-align: center;
+    }
+}
+
+h1{
+	font-size: 3rem;
+}
+h2{
+	font-size: 2.5rem;
+}
+h3{
+	font-size: 2rem;
+}
+h4{
+	font-size: 1.5rem
+}
+h5{
+	font-size: 1.3rem;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+	outline: none;
+}
+
+p, li{
+	font-size: 1.2rem;
+
+}
+
+//colors
+.base-blue{
+    color: $base-blue;
+}
+
+// Margin
+.mt-1 {
+	margin-top: 5px;
+}
+
+.mt-3 {
+	margin-top: 10px;
+}
+
+.mt-5 {
+	margin-top: 20px;
+}
+
+.mb-1 {
+	margin-bottom: 5px;
+}
+
+.mb-3 {
+	margin-bottom: 10px;
+}
+
+.mb-5 {
+	margin-bottom: 20px;
+}
+
+//Padding
+
+.pt-1 {
+	padding-top: 5px;
+}
+
+.pt-3 {
+	padding-top: 10px;
+}
+
+.pt-5 {
+	padding-top: 20px;
+}
+
+.pb-1 {
+	padding-bottom: 5px;
+}
+
+.pb-3 {
+	padding-bottom: 10px;
+}
+
+.pb-5 {
+	padding-bottom: 20px;
+}
+
+.pointer {
+	cursor: pointer;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.form-control {
+	padding: 3px;
+}
+.container{
+	max-width: 1240px;
+	margin: auto;
+	@include sm{
+		margin: 0 20px;
+	}
+}
+
+//Buttons
+
+.btn{
+    transition: 0.4s;
+    width: 200px;
+	background-color: transparent;
+	color: white;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+
+//Fonts
+.bold{
+    font-weight: 700;
+}
+
+.bolder{
+    font-weight: 900;
+}
+
+.light{
+    font-weight: 300;
+}
