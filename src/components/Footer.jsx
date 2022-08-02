@@ -6,8 +6,7 @@ import {
   FaInstagramSquare,
   FaTwitterSquare,
 } from "react-icons/fa";
-
-export const Footer = () => {
+const Footer = () => {
   return (
     <footer className="mt-5">
       <section className="footer-container container">
@@ -52,3 +51,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer

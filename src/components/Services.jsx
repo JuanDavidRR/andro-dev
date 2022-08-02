@@ -7,7 +7,7 @@ import Development from "./services/Development";
 import SEO from "./services/SEO";
 import Consultoria from "./services/Consultoria";
 
-export const Services = () => {
+const Services = () => {
   const [activeTab, setActiveTab] = useState("webDevelopment");
 
   return (
@@ -99,3 +99,5 @@ export const Services = () => {
     </section>
   );
 };
+
+export default Services

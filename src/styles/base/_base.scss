@@ -8,8 +8,7 @@
 
 html,
 body {
-	height: 100vh;
-	width: 100vw;
+
 	overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     background-color: $dark-grey;
@@ -58,7 +57,7 @@ a{
 	outline: none;
 }
 
-p, li{
+p, li, button{
 	font-size: 1.2rem;
 
 }
@@ -131,10 +130,16 @@ p, li{
 	padding: 3px;
 }
 .container{
-	max-width: 1240px;
+	padding: 0 15rem;
 	margin: auto;
+	@include lg{
+		padding: 0 10rem;
+	}
+	@include md{
+		padding: 0 5rem;
+	}
 	@include sm{
-		margin: 0 20px;
+		padding: 0 25px;
 	}
 }
 
@@ -149,7 +154,6 @@ p, li{
 	border-radius: 15px;
 	cursor: pointer;
 }
-
 
 //Fonts
 .bold{

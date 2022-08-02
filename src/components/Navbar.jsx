@@ -8,8 +8,27 @@ const Navbar = () => {
   const handleNavbar = () =>{
     setactive(!active)
 }
+
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("navbar").style.background = '#139cb5';
+        document.getElementById("btn-nav").style.background = '#313131';
+
+    } else {
+        document.getElementById("navbar").style.padding = "30px 10px";
+        document.getElementById("navbar").style.background = "transparent";
+        document.getElementById("navbar").style.transition = "0.4s";
+        document.getElementById("btn-nav").style.background = '#139cb5';
+
+    }
+}
   return (
-    <header>
+    <header id='navbar'>
         <section className='header-container'>
             <h1 className='bolder'>LOGO</h1>
             <nav className='header-navbar'>
@@ -20,14 +39,13 @@ const Navbar = () => {
                     <li className='list-item'><a href="#portafolio">Portfolio</a></li>
                     <li className='list-item'><a href="/">| Blog</a></li>
                 </ul>
-                <a className='header-cta btn' href="/">Inicia Ya</a>
             </nav>
+            <a id='btn-nav' className='header-cta btn' href="/">Inicia Ya</a>
             <button onClick={handleNavbar} className='header-navbar-mobileBtn'>
                 {active 
                 ? <AiOutlineClose size={35}/>
                 : <HiOutlineMenuAlt1 size={35}/>}
             </button>
-
         </section>
 
         <section className={active? 'navbar-mobile-menu active' : 'navbar-mobile-menu inactive'}>

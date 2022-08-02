@@ -2,7 +2,9 @@ import React from "react";
 import { portfolio } from "../portfolio";
 import PortfolioItem from "./PortfolioItem";
 
-export const Porfolio = () => {
+const Porfolio = () => {
+
+  
   return (
     <section id="portafolio" className="product-list-container container mt-3">
       <div className="product-list-text">
@@ -13,8 +15,9 @@ export const Porfolio = () => {
       </div>
       <div className="product-list">
         <ul>
-        {portfolio.map((product, i) => (
+        {portfolio.slice(0,6).map((product, i) => (
           <PortfolioItem
+            key={product.id}
             i={product.id}
             title={product.title}
             img={product.img}
@@ -27,3 +30,5 @@ export const Porfolio = () => {
     </section>
   );
 };
+
+export default Porfolio
