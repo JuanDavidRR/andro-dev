@@ -1,4 +1,5 @@
 import React, { lazy, Suspense } from "react";
+import Advantage from "../components/Advantage";
 import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
@@ -13,6 +14,7 @@ const Homepage = () => {
       <Hero />
       <Suspense>
         <Services />
+        <Advantage />
         <Porfolio />
         <Footer />
       </Suspense>

@@ -1,0 +1,39 @@
+.card-advantage {
+  width: 14.6rem;
+  height: 22.9rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(19, 156, 181);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card-items {
+    flex-shrink: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    
+}
+
+.card-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem
+}
+
+.card-description {
+    text-align: center;
+    font-size: small;
+}
+
+.card-near {
+    transform: scale(0.9);
+}
+.card-far {
+    transform: scale(0.8);
+}
